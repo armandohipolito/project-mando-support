@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PROJECT MANDO ADS</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #080808;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #0d0d0d;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.logo span {
+    color: #e50914;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: radial-gradient(circle, #350808, #080808 70%);
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #e50914;
+}
+
+.hero p {
+    color: #999;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.title span {
+    color: #e50914;
+}
+
+.ad-card {
+    background: #141414;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.ad-box {
+    background: #101010;
+    border: 1px dashed #444;
+    border-radius: 10px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.ad-box small {
+    color: #777;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.ad-box h2 {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.ad-box p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.back {
+    display: inline-block;
+    background: #e50914;
+    padding: 14px 25px;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+footer span {
+    color: #e50914;
+}
+
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        PROJECT MANDO <span>ADS</span>
+    </div>
+
+    <a href="index.html">← VOLVER</a>
+
+</header>
+
+<section class="hero">
+
+    <h1>CENTRO DE <span>PUBLICIDAD</span></h1>
+
+    <p>
+        Explora los anuncios y descubre
+        nuevas oportunidades.
+    </p>
+
+</section>
+
+<section class="container">
+
+    <h2 class="title">
+        ANUNCIOS <span>DISPONIBLES</span>
+    </h2>
+
+    <div class="ad-card">
+
+        <div class="ad-box">
+
+            <small>PUBLICIDAD</small>
+
+            <h2>ESPACIO PUBLICITARIO</h2>
+
+            <p>
+                Aquí aparecerá la publicidad
+                cuando conectemos una plataforma
+                publicitaria compatible.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="ad-card">
+
+        <div class="ad-box">
+
+            <small>PUBLICIDAD</small>
+
+            <h2>ANUNCIOS PRÓXIMAMENTE</h2>
+
+            <p>
+                Estamos preparando esta sección
+                para ofrecer publicidad
+                y contenido de anunciantes.
+            </p>
+
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back">
+        VOLVER A PROJECT MANDO SUPPORT
+    </a>
+
+</section>
+
+<footer>
+
+    <p>
+        PROJECT MANDO <span>SUPPORT</span>
+    </p>
+
+    <p>
+        © 2026 · PROYECTO INDEPENDIENTE
+    </p>
+
+</footer>
+
+</body>
+</html>

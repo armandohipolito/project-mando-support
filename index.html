@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PROJECT MANDO SUPPORT</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #0d0d0d;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #e50914;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(150,0,0,.25),
+    transparent 65%),
+    #080808;
+}
+
+.tag {
+    color: #e50914;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 70px);
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e50914;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.red {
+    background: #e50914;
+    color: white;
+}
+
+.red:hover {
+    background: #ff3030;
+    transform: translateY(-3px);
+}
+
+.dark {
+    background: #181818;
+    color: white;
+    border: 1px solid #333;
+}
+
+.dark:hover {
+    background: #252525;
+    transform: translateY(-3px);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #e50914;
+}
+
+.subtitle {
+    color: #888;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #e50914;
+    box-shadow: 0 10px 30px rgba(229,9,20,.08);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #999;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.card .button {
+    width: 100%;
+    text-align: center;
+}
+
+.paypal {
+    background: #0070ba;
+}
+
+.paypal:hover {
+    background: #005ea6;
+}
+
+.ad-section {
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+}
+
+.ad-section h2 {
+    margin-bottom: 15px;
+}
+
+.ad-section p {
+    color: #999;
+    line-height: 1.7;
+}
+
+.ad-placeholder {
+    margin-top: 25px;
+    min-height: 180px;
+    border: 1px dashed #444;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ad-placeholder span {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.ad-placeholder h3 {
+    color: #aaa;
+}
+
+.news-card {
+    background: #111;
+    padding: 25px;
+    border-left: 4px solid #e50914;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.news-card p {
+    color: #999;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background: #0d0d0d;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    color: #777;
+    margin: 8px;
+}
+
+footer span {
+    color: #e50914;
+}
+
+@media(max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .container {
+        padding: 50px 20px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        PROJECT MANDO <span>SUPPORT</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a href="#apoyo">APOYAR</a>
+        <a href="#publicidad">PUBLICIDAD</a>
+    </nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+    <div class="tag">
+        PLATAFORMA OFICIAL DE APOYO
+    </div>
+
+    <h1>
+        PROJECT MANDO <span>SUPPORT</span>
+    </h1>
+
+    <p>
+        Ayuda a que PROJECT MANDO siga creciendo.
+        Cada contribución y cada oportunidad
+        de apoyo nos acerca a nuevas metas.
+    </p>
+
+    <div class="buttons">
+
+        <a href="#apoyo" class="button red">
+            APOYAR PROYECTO
+        </a>
+
+        <a href="anuncios.html" class="button dark">
+    VER PUBLICIDAD
+</a>
+
+    </div>
+
+</section>
+
+<section class="container" id="apoyo">
+
+    <h1 class="section-title">
+        FORMAS DE <span>APOYAR</span>
+    </h1>
+
+    <p class="subtitle">
+        Elige cómo quieres ayudar a PROJECT MANDO.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">💰</div>
+
+            <h2>APOYO DIRECTO</h2>
+
+            <p>
+                Si deseas contribuir directamente
+                al proyecto, puedes realizar un
+                apoyo voluntario mediante PayPal.
+            </p>
+
+            <a href="TU-ENLACE-PAYPAL"
+               class="button paypal"
+               target="_blank">
+                APOYAR CON PAYPAL
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">📺</div>
+
+            <h2>PUBLICIDAD</h2>
+
+            <p>
+                Descubre la sección publicitaria
+                de PROJECT MANDO. Los ingresos
+                publicitarios ayudan a financiar
+                el proyecto cuando la plataforma
+                de publicidad esté habilitada.
+            </p>
+
+           <a href="anuncios.html" class="button red">
+    VER ANUNCIOS
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container" id="publicidad">
+
+    <h1 class="section-title">
+        CENTRO DE <span>PUBLICIDAD</span>
+    </h1>
+
+    <p class="subtitle">
+        Espacio dedicado a los anuncios
+        y oportunidades publicitarias.
+    </p>
+
+    <div class="ad-section">
+
+        <h2>PUBLICIDAD DE LA COMUNIDAD</h2>
+
+        <p>
+            Próximamente podrás encontrar
+            anuncios publicitarios aquí.
+        </p>
+
+        <div class="ad-placeholder">
+
+            <span>ESPACIO PUBLICITARIO</span>
+
+            <h3>ANUNCIOS DISPONIBLES PRÓXIMAMENTE</h3>
+
+            <p>
+                La publicidad aparecerá cuando
+                configuremos un proveedor
+                publicitario compatible.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h1 class="section-title">
+        ¿POR QUÉ <span>APOYAR?</span>
+    </h1>
+
+    <div class="news-card">
+
+        <h2>🚀 AYUDA A CONSTRUIR EL FUTURO</h2>
+
+        <p>
+            PROJECT MANDO es un proyecto
+            independiente que busca crecer,
+            mejorar su comunidad y crear
+            nuevas experiencias.
+            Tu apoyo puede contribuir
+            a que podamos avanzar.
+        </p>
+
+    </div>
+
+    <div class="news-card">
+
+        <h2>🔴 UNA COMUNIDAD, UN PROYECTO</h2>
+
+        <p>
+            Cada integrante forma parte
+            de nuestra comunidad.
+            Gracias por participar,
+            compartir y ayudar a que
+            PROJECT MANDO siga creciendo.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        PROJECT MANDO <span>SUPPORT</span>
+    </p>
+
+    <p>
+        PROJECT MANDOメFF2025 #1K
+    </p>
+
+    <p>
+        © 2026 · PROYECTO INDEPENDIENTE
+    </p>
+
+</footer>
+
+</body>
+</html>
